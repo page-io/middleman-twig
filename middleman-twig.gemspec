@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   # The version of middleman-core your extension depends on
   # s.add_runtime_dependency("middleman-core", [">= 3.3.12"])
   s.add_runtime_dependency("middleman-core")
-  s.add_runtime_dependency("ruby-twig", git: 'https://github.com/page-io/ruby-twig')
+  # s.add_runtime_dependency("ruby-twig", git: 'https://github.com/page-io/ruby-twig')
 
   # Additional dependencies
   # s.add_runtime_dependency("gem-name", "gem-version")
