@@ -1,4 +1,4 @@
-require 'liquid'
+require 'twig'
 
 module Middleman
   module TwigExtension
