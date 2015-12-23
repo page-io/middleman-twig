@@ -5,6 +5,7 @@ require 'middleman-core'
 
   require 'middleman-twig/template'
   require 'middleman-twig/extension'
+  require 'middleman-twig/renderers/twig'
 
   ::Middleman::TwigExtension::Extension
 end

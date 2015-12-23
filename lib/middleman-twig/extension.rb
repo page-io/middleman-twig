@@ -8,6 +8,7 @@ module Middleman
         # Call super to build options from the options_hash
         super
         app.inst.template_extensions twig: :html
+        app.register Middleman::Renderers::Twig
       end
 
     end
