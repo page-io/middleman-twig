@@ -15,8 +15,7 @@ module Middleman
 
           # After config, setup mustache partial paths
           app.after_configuration do
-            # ::Twig::Template.file_system = ::Twig::LocalFileSystem.new(source_dir)
-
+            ::Tilt::TwigTemplate2.loader = ::Twig::Loader::Filesystem.new(source_dir)
             # Convert data object into a hash for twig
             sitemap.provides_metadata %r{\.twig$} do
               locals_hash = { :locals => { :data => data.to_h } }
