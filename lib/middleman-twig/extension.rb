@@ -4,12 +4,17 @@ module Middleman
     class Extension < ::Middleman::Extension
       self.supports_multiple_instances = true
 
-      def initialize(app, options_hash={}, &block)
-        # Call super to build options from the options_hash
-        super
-        app.inst.template_extensions twig: :html
-        app.register Middleman::Renderers::Twig
+      option :debug, false, 'debug mode'
+
+      # def initialize(app, options_hash={}, &block)
+      #   super
+      # end
+
+      def after_configuration
+        ::Tilt::TwigTemplate2.loader = ::Twig::Loader::Filesystem.new(app.config[:source])
+        ::Tilt::TwigTemplate2.debug = options.debug
       end
+
 
     end
   end
