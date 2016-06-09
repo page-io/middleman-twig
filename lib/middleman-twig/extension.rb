@@ -11,10 +11,9 @@ module Middleman
       # end
 
       def after_configuration
-        ::Tilt::TwigTemplate2.loader = ::Twig::Loader::Filesystem.new(app.config[:source])
-        ::Tilt::TwigTemplate2.debug = options.debug
+        ::Tilt::TwigTemplate.loader = ::Twig::Loader::Filesystem.new(app.config[:source])
+        ::Tilt::TwigTemplate.debug = options.debug
       end
-
 
     end
   end
